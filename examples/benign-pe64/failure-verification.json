@@ -1,0 +1,38 @@
+[
+  {
+    "check": "missing-backend",
+    "status": "partial",
+    "backend_status": "unavailable",
+    "sample_executed": false
+  },
+  {
+    "check": "failed-backend",
+    "status": "partial",
+    "backend_status": "failed",
+    "sample_executed": false
+  },
+  {
+    "check": "real-ghidra-timeout",
+    "status": "partial",
+    "backend_status": "timeout",
+    "sample_executed": false
+  },
+  {
+    "check": "stripped-recovery",
+    "status": "complete",
+    "backend_status": "complete",
+    "sample_executed": false
+  },
+  {
+    "check": "optimized-recovery",
+    "status": "complete",
+    "backend_status": "complete",
+    "sample_executed": false
+  },
+  {
+    "check": "import-reference",
+    "status": "complete",
+    "backend_status": "complete",
+    "sample_executed": false
+  }
+]

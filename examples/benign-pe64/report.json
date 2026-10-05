@@ -1,0 +1,1564 @@
+{
+  "schema_version": "1.0.0",
+  "tool": {
+    "name": "binary-workbench",
+    "version": "0.1.0"
+  },
+  "metadata": {
+    "generated_at": "2026-10-05T05:41:28.829513+00:00",
+    "host": "Windows",
+    "host_machine": "AMD64",
+    "python": "3.13.7"
+  },
+  "sample": {
+    "sha256": "5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119",
+    "size": 2048
+  },
+  "static": {
+    "sha256": "5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119",
+    "size": 2048,
+    "format": "PE",
+    "status": "complete",
+    "warnings": [],
+    "sections": [
+      {
+        "name": ".text",
+        "offset": 1024,
+        "file_size": 512,
+        "va": "0x140001000",
+        "memory_size": 146,
+        "permissions": "rx",
+        "valid": true,
+        "entropy": 2.28969621055176,
+        "rva": "0x1000",
+        "id": "section:0"
+      },
+      {
+        "name": ".rdata",
+        "offset": 1536,
+        "file_size": 512,
+        "va": "0x140002000",
+        "memory_size": 410,
+        "permissions": "r",
+        "valid": true,
+        "entropy": 3.9444005591899827,
+        "rva": "0x2000",
+        "id": "section:1"
+      }
+    ],
+    "segments": [],
+    "regions": [
+      {
+        "name": ".text",
+        "offset": 1024,
+        "file_size": 512,
+        "va": "0x140001000",
+        "memory_size": 146,
+        "permissions": "rx",
+        "valid": true,
+        "entropy": 2.28969621055176,
+        "rva": "0x1000",
+        "id": "section:0"
+      },
+      {
+        "name": ".rdata",
+        "offset": 1536,
+        "file_size": 512,
+        "va": "0x140002000",
+        "memory_size": 410,
+        "permissions": "r",
+        "valid": true,
+        "entropy": 3.9444005591899827,
+        "rva": "0x2000",
+        "id": "section:1"
+      },
+      {
+        "name": "headers",
+        "offset": 0,
+        "file_size": 1024,
+        "va": "0x140000000",
+        "memory_size": 1024,
+        "permissions": "r",
+        "valid": true,
+        "entropy": 1.1775452914320912
+      }
+    ],
+    "imports": [],
+    "exports": [
+      {
+        "name": "branch_fixture",
+        "rva": "0x1000",
+        "va": "0x140001000",
+        "forwarder": null
+      },
+      {
+        "name": "entry_fixture",
+        "rva": "0x1060",
+        "va": "0x140001060",
+        "forwarder": null
+      },
+      {
+        "name": "fixture_html",
+        "rva": "0x2050",
+        "va": "0x140002050",
+        "forwarder": null
+      },
+      {
+        "name": "fixture_marker",
+        "rva": "0x2000",
+        "va": "0x140002000",
+        "forwarder": null
+      },
+      {
+        "name": "fixture_url",
+        "rva": "0x2020",
+        "va": "0x140002020",
+        "forwarder": null
+      },
+      {
+        "name": "fixture_wide",
+        "rva": "0x2080",
+        "va": "0x140002080",
+        "forwarder": null
+      },
+      {
+        "name": "string_fixture",
+        "rva": "0x1030",
+        "va": "0x140001030",
+        "forwarder": null
+      }
+    ],
+    "symbols": [],
+    "dependencies": [],
+    "resources": [],
+    "certificates": [],
+    "overlay": null,
+    "file_entropy": 3.0032575138075677,
+    "headers": {
+      "Machine": 34404,
+      "NumberOfSections": 2,
+      "TimeDateStamp": 1791177240,
+      "Characteristics": 34
+    },
+    "strings": [
+      {
+        "id": "string:ascii:4d",
+        "text": "!This program cannot be run in DOS mode.$",
+        "encoding": "ascii",
+        "file_offset": 77,
+        "length": 41,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:180",
+        "text": ".text",
+        "encoding": "ascii",
+        "file_offset": 384,
+        "length": 5,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:1a4",
+        "text": " \u6000\u722e\u6164\u6174",
+        "encoding": "utf-16le",
+        "file_offset": 420,
+        "length": 10,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:1a7",
+        "text": "`.rdata",
+        "encoding": "ascii",
+        "file_offset": 423,
+        "length": 7,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:449",
+        "text": "\ufa83\u4800\u450f\u48c1\uc483\u5d08\u66c3\u0f2e\u841f",
+        "encoding": "utf-16le",
+        "file_offset": 1097,
+        "length": 18,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:600",
+        "text": "BINARY_WORKBENCH_BENIGN_FIXTURE",
+        "encoding": "ascii",
+        "file_offset": 1536,
+        "length": 31,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:620",
+        "text": "https://example.invalid/learning",
+        "encoding": "ascii",
+        "file_offset": 1568,
+        "length": 32,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:64f",
+        "text": "\u3c00\u6373\u6972\u7470\u613e\u656c\u7472\u2728\u6966\u7478\u7275\u2765\u3c29\u732f\u7263\u7069\u3e74\u5b1b\u3133m",
+        "encoding": "utf-16le",
+        "file_offset": 1615,
+        "length": 40,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:650",
+        "text": "<script>alert('fixture')</script>",
+        "encoding": "ascii",
+        "file_offset": 1616,
+        "length": 33,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:650",
+        "text": "\u733c\u7263\u7069\u3e74\u6c61\u7265\u2874\u6627\u7869\u7574\u6572\u2927\u2f3c\u6373\u6972\u7470\u1b3e\u335b\u6d31",
+        "encoding": "utf-16le",
+        "file_offset": 1616,
+        "length": 38,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:672",
+        "text": "[31m",
+        "encoding": "ascii",
+        "file_offset": 1650,
+        "length": 4,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:67f",
+        "text": "\u5700\u4900\u4400\u4500\u5f00\u4600\u4900\u5800\u5400\u5500\u5200\u4500",
+        "encoding": "utf-16le",
+        "file_offset": 1663,
+        "length": 24,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:680",
+        "text": "WIDE_FIXTURE",
+        "encoding": "utf-16le",
+        "file_offset": 1664,
+        "length": 24,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:6e8",
+        "text": "pe-x64.exe",
+        "encoding": "ascii",
+        "file_offset": 1768,
+        "length": 10,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:6e8",
+        "text": "\u6570\u782d\u3436\u652e\u6578",
+        "encoding": "utf-16le",
+        "file_offset": 1768,
+        "length": 10,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:70e",
+        "text": "\u3900!\u4800!\u5600!\u6300!\u7200!\u7e00!\u8b00!",
+        "encoding": "utf-16le",
+        "file_offset": 1806,
+        "length": 28,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:739",
+        "text": "branch_fixture",
+        "encoding": "ascii",
+        "file_offset": 1849,
+        "length": 14,
+        "truncated": false
+      },
+      {
+        "id": "string:utf-16le:739",
+        "text": "\u7262\u6e61\u6863\u665f\u7869\u7574\u6572\u6500\u746e\u7972\u665f\u7869\u7574\u6572\u6600\u7869\u7574\u6572\u685f\u6d74l\u6966\u7478\u7275\u5f65\u616d\u6b72\u7265\u6600\u7869\u7574\u6572\u755f\u6c72\u6600\u7869\u7574\u6572\u775f\u6469e\u7473\u6972\u676e\u665f\u7869\u7574\u6572",
+        "encoding": "utf-16le",
+        "file_offset": 1849,
+        "length": 96,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:748",
+        "text": "entry_fixture",
+        "encoding": "ascii",
+        "file_offset": 1864,
+        "length": 13,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:756",
+        "text": "fixture_html",
+        "encoding": "ascii",
+        "file_offset": 1878,
+        "length": 12,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:763",
+        "text": "fixture_marker",
+        "encoding": "ascii",
+        "file_offset": 1891,
+        "length": 14,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:772",
+        "text": "fixture_url",
+        "encoding": "ascii",
+        "file_offset": 1906,
+        "length": 11,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:77e",
+        "text": "fixture_wide",
+        "encoding": "ascii",
+        "file_offset": 1918,
+        "length": 12,
+        "truncated": false
+      },
+      {
+        "id": "string:ascii:78b",
+        "text": "string_fixture",
+        "encoding": "ascii",
+        "file_offset": 1931,
+        "length": 14,
+        "truncated": false
+      }
+    ],
+    "strings_truncated": false,
+    "indicators": [
+      {
+        "id": "indicator:string:ascii:620:0",
+        "kind": "url",
+        "value": "https://example.invalid/learning",
+        "source_id": "string:ascii:620",
+        "file_offset": 1568,
+        "length": 32
+      },
+      {
+        "id": "indicator:string:ascii:6e8:0",
+        "kind": "domain",
+        "value": "pe-x64.exe",
+        "source_id": "string:ascii:6e8",
+        "file_offset": 1768,
+        "length": 10
+      }
+    ],
+    "indicators_truncated": false,
+    "parser": {
+      "name": "pefile",
+      "version": "2024.8.26"
+    },
+    "architecture": "x64",
+    "bitness": 64,
+    "endianness": "little",
+    "image_base": "0x140000000",
+    "entry_rva": "0x1060",
+    "entry_va": "0x140001060",
+    "managed": false,
+    "symbol_table": {
+      "file_offset": 0,
+      "count": 0,
+      "status": "absent"
+    }
+  },
+  "reverse_engineering": {
+    "backend": "ghidra",
+    "version": "12.1.4",
+    "language": "x86:LE:64:default",
+    "analyzers": {
+      "ASCII Strings": true,
+      "ASCII Strings.Create Strings Containing Existing Strings": false,
+      "ASCII Strings.Create Strings Containing References": false,
+      "ASCII Strings.Force Model Reload": false,
+      "ASCII Strings.Require Null Termination for String": false,
+      "ASCII Strings.Search Only in Accessible Memory Blocks": false,
+      "Aggressive Instruction Finder": false,
+      "Aggressive Instruction Finder.Create Analysis Bookmarks": false,
+      "Apply Data Archives": false,
+      "Apply Data Archives.Create Analysis Bookmarks": false,
+      "Call Convention ID": false,
+      "Call-Fixup Installer": false,
+      "Condense Filler Bytes": false,
+      "Create Address Tables": true,
+      "Create Address Tables.Allow Offcut References": false,
+      "Create Address Tables.Auto Label Table": false,
+      "Create Address Tables.Create Analysis Bookmarks": false,
+      "Create Address Tables.Relocation Table Guide": false,
+      "Data Reference": true,
+      "Data Reference.Align End of Strings": false,
+      "Data Reference.Ascii String References": true,
+      "Data Reference.Create Address Tables": false,
+      "Data Reference.References to Pointers": true,
+      "Data Reference.Relocation Table Guide": false,
+      "Data Reference.Respect Execute Flag": true,
+      "Data Reference.Subroutine References": false,
+      "Data Reference.Switch Table References": false,
+      "Data Reference.Unicode String References": true,
+      "Decompiler Parameter ID": false,
+      "Decompiler Parameter ID.Commit Data Types": false,
+      "Decompiler Parameter ID.Commit Void Return Values": false,
+      "Decompiler Switch Analysis": false,
+      "Demangler Microsoft": false,
+      "Disassemble Entry Points": true,
+      "Disassemble Entry Points.Respect Execute Flag": true,
+      "Embedded Media": false,
+      "Embedded Media.Create Analysis Bookmarks": false,
+      "External Entry References": false,
+      "Function ID": true,
+      "Function ID.Always Apply FID Labels": false,
+      "Function ID.Create Analysis Bookmarks": false,
+      "Non-Returning Functions - Discovered": false,
+      "Non-Returning Functions - Discovered.Create Analysis Bookmarks": false,
+      "Non-Returning Functions - Discovered.Repair Flow Damage": false,
+      "Non-Returning Functions - Known": false,
+      "Non-Returning Functions - Known.Create Analysis Bookmarks": false,
+      "PDB MSDIA": false,
+      "PDB MSDIA.Search untrusted symbol servers": false,
+      "PDB Universal": false,
+      "PDB Universal.Import Source Line Info": false,
+      "PDB Universal.Search untrusted symbol servers": false,
+      "Reference": true,
+      "Reference.Align End of Strings": false,
+      "Reference.Ascii String References": true,
+      "Reference.Create Address Tables": false,
+      "Reference.References to Pointers": true,
+      "Reference.Relocation Table Guide": false,
+      "Reference.Respect Execute Flag": true,
+      "Reference.Subroutine References": false,
+      "Reference.Switch Table References": false,
+      "Reference.Unicode String References": true,
+      "Scalar Operand References": true,
+      "Scalar Operand References.Relocation Table Guide": false,
+      "Shared Return Calls": true,
+      "Shared Return Calls.Allow Conditional Jumps": false,
+      "Shared Return Calls.Assume Contiguous Functions Only": false,
+      "Stack": true,
+      "Stack.Create Local Variables": false,
+      "Stack.Create Param Variables": false,
+      "Subroutine References": true,
+      "Subroutine References.Create Thunks Early": false,
+      "Variadic Function Signature Override": false,
+      "Variadic Function Signature Override.Create Analysis Bookmarks": false,
+      "Windows x86 PE Exception Handling": false,
+      "Windows x86 PE RTTI Analyzer": false,
+      "Windows x86 Thread Environment Block (TEB) Analyzer": false,
+      "WindowsPE x86 Propagate External Parameters": false,
+      "WindowsResourceReference": false,
+      "WindowsResourceReference.Create Analysis Bookmarks": false,
+      "x86 Constant Reference Analyzer": true,
+      "x86 Constant Reference Analyzer.Create Data from pointer": true,
+      "x86 Constant Reference Analyzer.Function parameter/return Pointer analysis": true,
+      "x86 Constant Reference Analyzer.Require pointer param data type": false,
+      "x86 Constant Reference Analyzer.Stored Value Pointer analysis": true,
+      "x86 Constant Reference Analyzer.Trust values read from writable memory": false
+    },
+    "sha256": "5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119",
+    "functions": [
+      {
+        "name": "branch_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001000"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x14000102a"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "file_offset": 1024
+      },
+      {
+        "name": "string_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001030"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x140001055"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "file_offset": 1072
+      },
+      {
+        "name": "entry_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001060"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x140001091"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "file_offset": 1120
+      }
+    ],
+    "details": [
+      {
+        "name": "branch_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001000"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x14000102a"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "instructions": [
+          {
+            "bytes": "55",
+            "address": {
+              "space": "ram",
+              "value": "0x140001000"
+            },
+            "text": "PUSH RBP",
+            "file_offset": 1024
+          },
+          {
+            "bytes": "50",
+            "address": {
+              "space": "ram",
+              "value": "0x140001001"
+            },
+            "text": "PUSH RAX",
+            "file_offset": 1025
+          },
+          {
+            "bytes": "4889e5",
+            "address": {
+              "space": "ram",
+              "value": "0x140001002"
+            },
+            "text": "MOV RBP,RSP",
+            "file_offset": 1026
+          },
+          {
+            "bytes": "894d00",
+            "address": {
+              "space": "ram",
+              "value": "0x140001005"
+            },
+            "text": "MOV dword ptr [RBP],ECX",
+            "file_offset": 1029
+          },
+          {
+            "bytes": "837d000a",
+            "address": {
+              "space": "ram",
+              "value": "0x140001008"
+            },
+            "text": "CMP dword ptr [RBP],0xa",
+            "file_offset": 1032
+          },
+          {
+            "bytes": "7e0b",
+            "address": {
+              "space": "ram",
+              "value": "0x14000100c"
+            },
+            "text": "JLE 0x140001019",
+            "file_offset": 1036
+          },
+          {
+            "bytes": "8b4500",
+            "address": {
+              "space": "ram",
+              "value": "0x14000100e"
+            },
+            "text": "MOV EAX,dword ptr [RBP]",
+            "file_offset": 1038
+          },
+          {
+            "bytes": "83c007",
+            "address": {
+              "space": "ram",
+              "value": "0x140001011"
+            },
+            "text": "ADD EAX,0x7",
+            "file_offset": 1041
+          },
+          {
+            "bytes": "894504",
+            "address": {
+              "space": "ram",
+              "value": "0x140001014"
+            },
+            "text": "MOV dword ptr [RBP + 0x4],EAX",
+            "file_offset": 1044
+          },
+          {
+            "bytes": "eb09",
+            "address": {
+              "space": "ram",
+              "value": "0x140001017"
+            },
+            "text": "JMP 0x140001022",
+            "file_offset": 1047
+          },
+          {
+            "bytes": "8b4500",
+            "address": {
+              "space": "ram",
+              "value": "0x140001019"
+            },
+            "text": "MOV EAX,dword ptr [RBP]",
+            "file_offset": 1049
+          },
+          {
+            "bytes": "83e803",
+            "address": {
+              "space": "ram",
+              "value": "0x14000101c"
+            },
+            "text": "SUB EAX,0x3",
+            "file_offset": 1052
+          },
+          {
+            "bytes": "894504",
+            "address": {
+              "space": "ram",
+              "value": "0x14000101f"
+            },
+            "text": "MOV dword ptr [RBP + 0x4],EAX",
+            "file_offset": 1055
+          },
+          {
+            "bytes": "8b4504",
+            "address": {
+              "space": "ram",
+              "value": "0x140001022"
+            },
+            "text": "MOV EAX,dword ptr [RBP + 0x4]",
+            "file_offset": 1058
+          },
+          {
+            "bytes": "4883c408",
+            "address": {
+              "space": "ram",
+              "value": "0x140001025"
+            },
+            "text": "ADD RSP,0x8",
+            "file_offset": 1061
+          },
+          {
+            "bytes": "5d",
+            "address": {
+              "space": "ram",
+              "value": "0x140001029"
+            },
+            "text": "POP RBP",
+            "file_offset": 1065
+          },
+          {
+            "bytes": "c3",
+            "address": {
+              "space": "ram",
+              "value": "0x14000102a"
+            },
+            "text": "RET",
+            "file_offset": 1066
+          }
+        ],
+        "references": [
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001005"
+            },
+            "symbol": "",
+            "type": "DATA",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff0"
+            },
+            "file_offset": 1029,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001008"
+            },
+            "symbol": "",
+            "type": "DATA",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff0"
+            },
+            "file_offset": 1032,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000100c"
+            },
+            "symbol": "LAB_140001019",
+            "type": "CONDITIONAL_JUMP",
+            "to": {
+              "space": "ram",
+              "value": "0x140001019"
+            },
+            "file_offset": 1036,
+            "target_file_offset": 1049,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000100e"
+            },
+            "symbol": "",
+            "type": "DATA",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff0"
+            },
+            "file_offset": 1038,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001014"
+            },
+            "symbol": "",
+            "type": "WRITE",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1044,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001017"
+            },
+            "symbol": "LAB_140001022",
+            "type": "UNCONDITIONAL_JUMP",
+            "to": {
+              "space": "ram",
+              "value": "0x140001022"
+            },
+            "file_offset": 1047,
+            "target_file_offset": 1058,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001019"
+            },
+            "symbol": "",
+            "type": "DATA",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff0"
+            },
+            "file_offset": 1049,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000101f"
+            },
+            "symbol": "",
+            "type": "WRITE",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1055,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001022"
+            },
+            "symbol": "",
+            "type": "READ",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1058,
+            "target_file_offset": null,
+            "evidence_ids": []
+          }
+        ],
+        "callers": [
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x1400000a4"
+            }
+          },
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x14000018c"
+            }
+          },
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x1400020f3"
+            }
+          },
+          {
+            "type": "EXTERNAL",
+            "from": {
+              "space": "Entry Point",
+              "value": "0x0"
+            }
+          },
+          {
+            "type": "UNCONDITIONAL_CALL",
+            "from": {
+              "space": "ram",
+              "value": "0x14000106f"
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x140001000"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x14000100d"
+            },
+            "edges": [
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x140001019"
+                },
+                "type": "CONDITIONAL_JUMP"
+              },
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x14000100e"
+                },
+                "type": "FALL_THROUGH"
+              }
+            ]
+          },
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x14000100e"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x140001018"
+            },
+            "edges": [
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x140001022"
+                },
+                "type": "UNCONDITIONAL_JUMP"
+              }
+            ]
+          },
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x140001019"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x140001021"
+            },
+            "edges": [
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x140001022"
+                },
+                "type": "FALL_THROUGH"
+              }
+            ]
+          },
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x140001022"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x14000102a"
+            },
+            "edges": []
+          }
+        ],
+        "pseudocode": "\r\nint branch_fixture(int param_1)\r\n\r\n{\r\n  undefined4 uStack_c;\r\n  \r\n                    /* 0x1000  1  branch_fixture */\r\n  if (param_1 < 0xb) {\r\n    uStack_c = param_1 + -3;\r\n  }\r\n  else {\r\n    uStack_c = param_1 + 7;\r\n  }\r\n  return uStack_c;\r\n}\r\n\r\n",
+        "decompilation_status": "complete",
+        "decompilation_error": "",
+        "instructions_truncated": false,
+        "file_offset": 1024
+      },
+      {
+        "name": "string_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001030"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x140001055"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "instructions": [
+          {
+            "bytes": "55",
+            "address": {
+              "space": "ram",
+              "value": "0x140001030"
+            },
+            "text": "PUSH RBP",
+            "file_offset": 1072
+          },
+          {
+            "bytes": "50",
+            "address": {
+              "space": "ram",
+              "value": "0x140001031"
+            },
+            "text": "PUSH RAX",
+            "file_offset": 1073
+          },
+          {
+            "bytes": "4889e5",
+            "address": {
+              "space": "ram",
+              "value": "0x140001032"
+            },
+            "text": "MOV RBP,RSP",
+            "file_offset": 1074
+          },
+          {
+            "bytes": "894d04",
+            "address": {
+              "space": "ram",
+              "value": "0x140001035"
+            },
+            "text": "MOV dword ptr [RBP + 0x4],ECX",
+            "file_offset": 1077
+          },
+          {
+            "bytes": "8b5504",
+            "address": {
+              "space": "ram",
+              "value": "0x140001038"
+            },
+            "text": "MOV EDX,dword ptr [RBP + 0x4]",
+            "file_offset": 1080
+          },
+          {
+            "bytes": "488d05de0f0000",
+            "address": {
+              "space": "ram",
+              "value": "0x14000103b"
+            },
+            "text": "LEA RAX,[0x140002020]",
+            "file_offset": 1083
+          },
+          {
+            "bytes": "488d0db70f0000",
+            "address": {
+              "space": "ram",
+              "value": "0x140001042"
+            },
+            "text": "LEA RCX,[0x140002000]",
+            "file_offset": 1090
+          },
+          {
+            "bytes": "83fa00",
+            "address": {
+              "space": "ram",
+              "value": "0x140001049"
+            },
+            "text": "CMP EDX,0x0",
+            "file_offset": 1097
+          },
+          {
+            "bytes": "480f45c1",
+            "address": {
+              "space": "ram",
+              "value": "0x14000104c"
+            },
+            "text": "CMOVNZ RAX,RCX",
+            "file_offset": 1100
+          },
+          {
+            "bytes": "4883c408",
+            "address": {
+              "space": "ram",
+              "value": "0x140001050"
+            },
+            "text": "ADD RSP,0x8",
+            "file_offset": 1104
+          },
+          {
+            "bytes": "5d",
+            "address": {
+              "space": "ram",
+              "value": "0x140001054"
+            },
+            "text": "POP RBP",
+            "file_offset": 1108
+          },
+          {
+            "bytes": "c3",
+            "address": {
+              "space": "ram",
+              "value": "0x140001055"
+            },
+            "text": "RET",
+            "file_offset": 1109
+          }
+        ],
+        "references": [
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001035"
+            },
+            "symbol": "",
+            "type": "WRITE",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1077,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001038"
+            },
+            "symbol": "",
+            "type": "READ",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1080,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000103b"
+            },
+            "symbol": "fixture_url",
+            "type": "DATA",
+            "to": {
+              "space": "ram",
+              "value": "0x140002020"
+            },
+            "file_offset": 1083,
+            "target_file_offset": 1568,
+            "evidence_ids": [
+              "string:ascii:620"
+            ]
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001042"
+            },
+            "symbol": "fixture_marker",
+            "type": "DATA",
+            "to": {
+              "space": "ram",
+              "value": "0x140002000"
+            },
+            "file_offset": 1090,
+            "target_file_offset": 1536,
+            "evidence_ids": [
+              "string:ascii:600"
+            ]
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000104c"
+            },
+            "symbol": "fixture_marker",
+            "type": "DATA",
+            "to": {
+              "space": "ram",
+              "value": "0x140002000"
+            },
+            "file_offset": 1100,
+            "target_file_offset": 1536,
+            "evidence_ids": [
+              "string:ascii:600"
+            ]
+          }
+        ],
+        "callers": [
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x14000210b"
+            }
+          },
+          {
+            "type": "EXTERNAL",
+            "from": {
+              "space": "Entry Point",
+              "value": "0x0"
+            }
+          },
+          {
+            "type": "UNCONDITIONAL_CALL",
+            "from": {
+              "space": "ram",
+              "value": "0x14000107c"
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x140001030"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x140001055"
+            },
+            "edges": []
+          }
+        ],
+        "pseudocode": "\r\nchar * string_fixture(int param_1)\r\n\r\n{\r\n  char *pcVar1;\r\n  \r\n                    /* 0x1030  7  string_fixture */\r\n  pcVar1 = \"https://example.invalid/learning\";\r\n  if (param_1 != 0) {\r\n    pcVar1 = \"BINARY_WORKBENCH_BENIGN_FIXTURE\";\r\n  }\r\n  return pcVar1;\r\n}\r\n\r\n",
+        "decompilation_status": "complete",
+        "decompilation_error": "",
+        "instructions_truncated": false,
+        "file_offset": 1072
+      },
+      {
+        "name": "entry_fixture",
+        "address": {
+          "space": "ram",
+          "value": "0x140001060"
+        },
+        "end": {
+          "space": "ram",
+          "value": "0x140001091"
+        },
+        "name_source": "IMPORTED",
+        "boundary_source": "ghidra_analysis",
+        "instructions": [
+          {
+            "bytes": "55",
+            "address": {
+              "space": "ram",
+              "value": "0x140001060"
+            },
+            "text": "PUSH RBP",
+            "file_offset": 1120
+          },
+          {
+            "bytes": "4883ec30",
+            "address": {
+              "space": "ram",
+              "value": "0x140001061"
+            },
+            "text": "SUB RSP,0x30",
+            "file_offset": 1121
+          },
+          {
+            "bytes": "488d6c2430",
+            "address": {
+              "space": "ram",
+              "value": "0x140001065"
+            },
+            "text": "LEA RBP,[RSP + 0x30]",
+            "file_offset": 1125
+          },
+          {
+            "bytes": "b90c000000",
+            "address": {
+              "space": "ram",
+              "value": "0x14000106a"
+            },
+            "text": "MOV ECX,0xc",
+            "file_offset": 1130
+          },
+          {
+            "bytes": "e88cffffff",
+            "address": {
+              "space": "ram",
+              "value": "0x14000106f"
+            },
+            "text": "CALL 0x140001000",
+            "file_offset": 1135
+          },
+          {
+            "bytes": "8945fc",
+            "address": {
+              "space": "ram",
+              "value": "0x140001074"
+            },
+            "text": "MOV dword ptr [RBP + -0x4],EAX",
+            "file_offset": 1140
+          },
+          {
+            "bytes": "b901000000",
+            "address": {
+              "space": "ram",
+              "value": "0x140001077"
+            },
+            "text": "MOV ECX,0x1",
+            "file_offset": 1143
+          },
+          {
+            "bytes": "e8afffffff",
+            "address": {
+              "space": "ram",
+              "value": "0x14000107c"
+            },
+            "text": "CALL 0x140001030",
+            "file_offset": 1148
+          },
+          {
+            "bytes": "4889c1",
+            "address": {
+              "space": "ram",
+              "value": "0x140001081"
+            },
+            "text": "MOV RCX,RAX",
+            "file_offset": 1153
+          },
+          {
+            "bytes": "8b45fc",
+            "address": {
+              "space": "ram",
+              "value": "0x140001084"
+            },
+            "text": "MOV EAX,dword ptr [RBP + -0x4]",
+            "file_offset": 1156
+          },
+          {
+            "bytes": "0fbe09",
+            "address": {
+              "space": "ram",
+              "value": "0x140001087"
+            },
+            "text": "MOVSX ECX,byte ptr [RCX]",
+            "file_offset": 1159
+          },
+          {
+            "bytes": "01c8",
+            "address": {
+              "space": "ram",
+              "value": "0x14000108a"
+            },
+            "text": "ADD EAX,ECX",
+            "file_offset": 1162
+          },
+          {
+            "bytes": "4883c430",
+            "address": {
+              "space": "ram",
+              "value": "0x14000108c"
+            },
+            "text": "ADD RSP,0x30",
+            "file_offset": 1164
+          },
+          {
+            "bytes": "5d",
+            "address": {
+              "space": "ram",
+              "value": "0x140001090"
+            },
+            "text": "POP RBP",
+            "file_offset": 1168
+          },
+          {
+            "bytes": "c3",
+            "address": {
+              "space": "ram",
+              "value": "0x140001091"
+            },
+            "text": "RET",
+            "file_offset": 1169
+          }
+        ],
+        "references": [
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001065"
+            },
+            "symbol": "",
+            "type": "DATA",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff8"
+            },
+            "file_offset": 1125,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000106f"
+            },
+            "symbol": "branch_fixture",
+            "type": "UNCONDITIONAL_CALL",
+            "to": {
+              "space": "ram",
+              "value": "0x140001000"
+            },
+            "file_offset": 1135,
+            "target_file_offset": 1024,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001074"
+            },
+            "symbol": "",
+            "type": "WRITE",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1140,
+            "target_file_offset": null,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x14000107c"
+            },
+            "symbol": "string_fixture",
+            "type": "UNCONDITIONAL_CALL",
+            "to": {
+              "space": "ram",
+              "value": "0x140001030"
+            },
+            "file_offset": 1148,
+            "target_file_offset": 1072,
+            "evidence_ids": []
+          },
+          {
+            "from": {
+              "space": "ram",
+              "value": "0x140001084"
+            },
+            "symbol": "",
+            "type": "READ",
+            "to": {
+              "space": "stack",
+              "value": "0xfffffffffffffff4"
+            },
+            "file_offset": 1156,
+            "target_file_offset": null,
+            "evidence_ids": []
+          }
+        ],
+        "callers": [
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x1400000a0"
+            }
+          },
+          {
+            "type": "DATA",
+            "from": {
+              "space": "ram",
+              "value": "0x1400020f7"
+            }
+          },
+          {
+            "type": "EXTERNAL",
+            "from": {
+              "space": "Entry Point",
+              "value": "0x0"
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "start": {
+              "space": "ram",
+              "value": "0x140001060"
+            },
+            "end": {
+              "space": "ram",
+              "value": "0x140001091"
+            },
+            "edges": [
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x140001000"
+                },
+                "type": "UNCONDITIONAL_CALL"
+              },
+              {
+                "to": {
+                  "space": "ram",
+                  "value": "0x140001030"
+                },
+                "type": "UNCONDITIONAL_CALL"
+              }
+            ]
+          }
+        ],
+        "pseudocode": "\r\nint entry_fixture(void)\r\n\r\n{\r\n  int iVar1;\r\n  char *pcVar2;\r\n  \r\n                    /* 0x1060  2  entry_fixture */\r\n  iVar1 = branch_fixture(0xc);\r\n  pcVar2 = (char *)string_fixture(1);\r\n  return iVar1 + *pcVar2;\r\n}\r\n\r\n",
+        "decompilation_status": "complete",
+        "decompilation_error": "",
+        "instructions_truncated": false,
+        "file_offset": 1120
+      }
+    ],
+    "warnings": [],
+    "status": "complete",
+    "selection": "branch_fixture,string_fixture,entry_fixture",
+    "provenance": {
+      "launcher": "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55",
+      "utility": "bb42a14285530c7d41373e1d130677bd2b90b34f32aedba5042f23663d652c7e",
+      "policy": "ec409bc5188d6d38e457a11cb4f0e80803231a334bb2cb29a182f857c17c08fc",
+      "exporter": "02e1b908c909991910396b023efbc62b35abc7d6b6ce51862d26e2041ba5137f"
+    },
+    "limits": {
+      "wall_seconds": 180,
+      "analysis_seconds": 90,
+      "decompile_seconds_per_function": 15,
+      "memory_bytes": 4294967296,
+      "processes": 4,
+      "cpu_threads": 2,
+      "output_bytes": 33554432
+    }
+  },
+  "signatures": {
+    "status": "complete",
+    "engine": "yara-x",
+    "version": "1.21.0",
+    "matches": [
+      {
+        "rule": "BinaryWorkbenchBenignMarker",
+        "pattern": "$marker",
+        "file_offset": 1536,
+        "length": 31
+      }
+    ],
+    "truncated": false,
+    "pattern_match_cap": 100,
+    "pattern_cap_reached": false,
+    "sha256": "5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119",
+    "rules_sha256": "50eb97b2e584868e27369930aafb2fabd1bdf802ca4f821d1f7c6ee85436b49a",
+    "includes": "disabled"
+  },
+  "findings": [
+    {
+      "id": "embedded_indicators:1d60c4329ece6693",
+      "kind": "embedded_indicators",
+      "priority": "low",
+      "explanation": "Observed 2 candidate network indicators; the first 100 support this finding.",
+      "evidence_ids": [
+        "indicator:string:ascii:620:0",
+        "indicator:string:ascii:6e8:0"
+      ],
+      "locations": [
+        {
+          "file_offset": 1568,
+          "length": 32
+        },
+        {
+          "file_offset": 1768,
+          "length": 10
+        }
+      ],
+      "uncertainty": "Strings may be documentation, resources, unused code or deliberately misleading data. No indicator was contacted.",
+      "classification": "heuristic_interpretation"
+    },
+    {
+      "id": "signature_match:348ba2e3bffce849",
+      "kind": "signature_match",
+      "priority": "medium",
+      "explanation": "Local rule BinaryWorkbenchBenignMarker matched.",
+      "evidence_ids": [
+        "signature:0"
+      ],
+      "locations": [
+        {
+          "file_offset": 1536,
+          "length": 31
+        }
+      ],
+      "uncertainty": "A rule match is only as reliable as its source and condition; harmless demonstration rules are not malware detection.",
+      "classification": "heuristic_interpretation"
+    }
+  ],
+  "warnings": [],
+  "limits": {
+    "input_bytes": 67108864,
+    "parser_wall_seconds": 30,
+    "parser_memory_bytes": 1073741824,
+    "parser_processes": 2,
+    "strings": 20000,
+    "string_characters": 4096,
+    "retained_string_bytes": 8388608,
+    "backend_output_bytes": 33554432,
+    "json_output_bytes": 16777216,
+    "html_output_bytes": 25165824,
+    "diagnostic_bytes": 1048576,
+    "sampled_worker_disk_bytes": 268435456,
+    "disk_enforcement": "sampled; overshoot possible",
+    "network_enforcement": "no network feature; OS network isolation is external",
+    "isolation": "resource containment, not a malware security boundary"
+  },
+  "status": "complete"
+}

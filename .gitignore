@@ -1,0 +1,15 @@
+.venv/
+.tools/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.coverage
+build/
+dist/
+*.egg-info/
+fixtures/build/
+verification/
+private-analysis/
+*.log
+.playwright-cli/

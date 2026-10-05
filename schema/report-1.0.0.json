@@ -1,0 +1,714 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:binary-workbench:report:1.0.0",
+  "title": "Binary Workbench report 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "metadata",
+    "sample",
+    "static",
+    "reverse_engineering",
+    "signatures",
+    "findings",
+    "limits",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "tool": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "binary-workbench"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "$ref": "#/$defs/status"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "generated_at": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        },
+        "host_machine": {
+          "type": "string"
+        },
+        "python": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sample": {
+      "type": "object",
+      "required": [
+        "sha256",
+        "size"
+      ],
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 67108864
+        }
+      },
+      "additionalProperties": false
+    },
+    "static": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "format": {
+          "enum": [
+            "PE",
+            "ELF",
+            "unknown"
+          ]
+        },
+        "architecture": {
+          "enum": [
+            "x86",
+            "x64",
+            "unsupported"
+          ]
+        },
+        "bitness": {
+          "enum": [
+            32,
+            64
+          ]
+        },
+        "endianness": {
+          "enum": [
+            "little",
+            "big"
+          ]
+        },
+        "image_base": {
+          "$ref": "#/$defs/hex"
+        },
+        "entry_va": {
+          "$ref": "#/$defs/hex"
+        },
+        "entry_rva": {
+          "$ref": "#/$defs/hex"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "file_entropy": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 8
+        },
+        "sections": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "segments": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "regions": {
+          "type": "array",
+          "maxItems": 50001,
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "strings": {
+          "type": "array",
+          "maxItems": 20000,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "text",
+              "encoding",
+              "file_offset",
+              "length",
+              "truncated"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 4096
+              },
+              "encoding": {
+                "enum": [
+                  "ascii",
+                  "utf-16le"
+                ]
+              },
+              "file_offset": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "truncated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "strings_truncated": {
+          "type": "boolean"
+        },
+        "indicators_truncated": {
+          "type": "boolean"
+        },
+        "imports": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "type": "object"
+          }
+        },
+        "exports": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "type": "object"
+          }
+        },
+        "symbols": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "type": "object"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "type": "object"
+          }
+        },
+        "certificates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "indicators": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "kind",
+              "value",
+              "source_id",
+              "file_offset",
+              "length"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "url",
+                  "domain",
+                  "ip"
+                ]
+              },
+              "file_offset": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "overlay": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "headers": {
+          "type": "object"
+        },
+        "parser": {
+          "type": "object"
+        },
+        "managed": {
+          "type": "boolean"
+        },
+        "symbol_table": {
+          "type": "object"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reverse_engineering": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "functions": {
+          "type": "array",
+          "maxItems": 50000,
+          "items": {
+            "$ref": "#/$defs/function"
+          }
+        },
+        "details": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/$defs/function"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "instructions",
+                  "references",
+                  "callers",
+                  "blocks",
+                  "pseudocode",
+                  "decompilation_status",
+                  "instructions_truncated"
+                ],
+                "properties": {
+                  "instructions": {
+                    "type": "array",
+                    "maxItems": 10000,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "address",
+                        "bytes",
+                        "text"
+                      ],
+                      "properties": {
+                        "address": {
+                          "$ref": "#/$defs/address"
+                        },
+                        "bytes": {
+                          "type": "string",
+                          "pattern": "^([0-9a-f]{2}){1,15}$"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "file_offset": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ],
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  },
+                  "references": {
+                    "type": "array",
+                    "maxItems": 100000
+                  },
+                  "callers": {
+                    "type": "array",
+                    "maxItems": 100000
+                  },
+                  "blocks": {
+                    "type": "array",
+                    "maxItems": 10000
+                  },
+                  "pseudocode": {
+                    "type": "string",
+                    "maxLength": 1048576
+                  },
+                  "decompilation_status": {
+                    "$ref": "#/$defs/status"
+                  },
+                  "instructions_truncated": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "reason": {
+          "type": "string"
+        },
+        "backend": {
+          "const": "ghidra"
+        },
+        "version": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "selection": {
+          "type": "string"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "provenance": {
+          "type": "object"
+        },
+        "limits": {
+          "type": "object"
+        },
+        "analyzers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "signatures": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "engine": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "rules_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "includes": {
+          "const": "disabled"
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "pattern_match_cap": {
+          "type": "integer"
+        },
+        "matches": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "type": "object",
+            "required": [
+              "rule",
+              "pattern",
+              "file_offset",
+              "length"
+            ],
+            "properties": {
+              "rule": {
+                "type": "string"
+              },
+              "pattern": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "file_offset": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "pattern_cap_reached": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "priority",
+          "explanation",
+          "evidence_ids",
+          "locations",
+          "uncertainty",
+          "classification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "priority": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "locations": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "uncertainty": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "const": "heuristic_interpretation"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "limits": {
+      "type": "object"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "complete",
+        "partial",
+        "unsupported",
+        "failed",
+        "unavailable",
+        "timeout",
+        "output_limit",
+        "skipped"
+      ]
+    },
+    "hex": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]{1,32}$"
+    },
+    "address": {
+      "type": "object",
+      "required": [
+        "space",
+        "value"
+      ],
+      "properties": {
+        "space": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "value": {
+          "$ref": "#/$defs/hex"
+        }
+      },
+      "additionalProperties": false
+    },
+    "region": {
+      "type": "object",
+      "required": [
+        "name",
+        "offset",
+        "file_size",
+        "va",
+        "memory_size",
+        "permissions",
+        "valid",
+        "entropy"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "file_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "va": {
+          "$ref": "#/$defs/hex"
+        },
+        "rva": {
+          "$ref": "#/$defs/hex"
+        },
+        "memory_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "permissions": {
+          "type": "string",
+          "pattern": "^[rwx]*$"
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "entropy": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 8
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "function": {
+      "type": "object",
+      "required": [
+        "name",
+        "address",
+        "end",
+        "name_source",
+        "boundary_source",
+        "file_offset"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "address": {
+          "$ref": "#/$defs/address"
+        },
+        "end": {
+          "$ref": "#/$defs/address"
+        },
+        "name_source": {
+          "type": "string"
+        },
+        "boundary_source": {
+          "const": "ghidra_analysis"
+        },
+        "file_offset": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

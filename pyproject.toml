@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "binary-analysis-workbench"
+version = "0.1.0"
+description = "Offline evidence-centered PE/ELF analysis and reverse engineering"
+requires-python = ">=3.13"
+dependencies = ["pefile==2024.8.26", "pyelftools==0.33"]
+license = "MIT"
+
+[project.scripts]
+binary-workbench = "binary_workbench.cli:main"
+
+[project.optional-dependencies]
+signatures = ["yara-x==1.21.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

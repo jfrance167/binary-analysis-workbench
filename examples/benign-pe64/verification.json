@@ -1,0 +1,46 @@
+[
+  {
+    "fixture": "pe-x64.exe",
+    "status": "complete",
+    "sha256": "5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119",
+    "functions": 3,
+    "selected": 3,
+    "instructions": 44,
+    "joined_string_or_import_references": 3,
+    "signature_matches": 1,
+    "sample_executed": false
+  },
+  {
+    "fixture": "pe-x86.exe",
+    "status": "complete",
+    "sha256": "0f196eed543e446e91c3be53d1137937491e49561a2c45ac70ad7580466be2f5",
+    "functions": 3,
+    "selected": 3,
+    "instructions": 42,
+    "joined_string_or_import_references": 6,
+    "signature_matches": 1,
+    "sample_executed": false
+  },
+  {
+    "fixture": "elf-x64.elf",
+    "status": "complete",
+    "sha256": "69dd7c12ce69afb1eff00d8ec0decea1de142564e75973fcfe15d8efe65f92a3",
+    "functions": 3,
+    "selected": 3,
+    "instructions": 40,
+    "joined_string_or_import_references": 2,
+    "signature_matches": 1,
+    "sample_executed": false
+  },
+  {
+    "fixture": "elf-x86.elf",
+    "status": "complete",
+    "sha256": "3e58166dd4284c7c681b1c915b6043e5f52cee188ce17a86721fe6bf5c3828ca",
+    "functions": 3,
+    "selected": 3,
+    "instructions": 42,
+    "joined_string_or_import_references": 6,
+    "signature_matches": 1,
+    "sample_executed": false
+  }
+]

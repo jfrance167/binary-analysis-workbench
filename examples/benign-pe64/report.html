@@ -1,0 +1,1350 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;; connect-src &#x27;none&#x27;; img-src &#x27;none&#x27;; style-src &#x27;sha256-wdSPAd350zIzsiH3gVZfKIfzlZiQEJ0mQLTqXprY59M=&#x27;; script-src &#x27;sha256-Xlw0m6NpFBT/9oPJrcgOP5182seYk57N81UvAC8V5J4=&#x27;"><title>Binary Workbench report</title><style>body{font:16px system-ui;margin:2rem auto;max-width:100rem;padding:0 1rem;background:#101725;color:#edf3ff}a{color:#9cc9ff}input{width:85%;padding:.7rem}article,section{border:1px solid #41516c;padding:1rem;margin:1rem 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px ui-monospace,monospace}h2{color:#adcaff}.note{color:#d6b98c}[hidden]{display:none}label{display:block;margin:1rem 0}nav a{margin-right:1rem}</style></head><body><h1>Binary Workbench</h1><p>Status: complete</p><p class="note">Observed facts and heuristic interpretations are distinct. No findings is inconclusive. No extracted indicator is contacted. Strings are printable byte runs, not validated runtime values.</p><nav><a href="#static-sections">Sections</a><a href="#static-strings">Strings</a><a href="#functions">Functions</a><a href="#findings">Triage</a></nav><label>Search evidence <input id="search" type="search" autocomplete="off" placeholder="Search names, addresses, strings or rule evidence"></label><p id="count" aria-live="polite"></p><section id="sample" class="searchable"><h2>sample</h2><pre>{
+  &quot;sha256&quot;: &quot;5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119&quot;,
+  &quot;size&quot;: 2048
+}</pre></section><section id="metadata" class="searchable"><h2>metadata</h2><pre>{
+  &quot;generated_at&quot;: &quot;2026-10-05T05:41:28.829513+00:00&quot;,
+  &quot;host&quot;: &quot;Windows&quot;,
+  &quot;host_machine&quot;: &quot;AMD64&quot;,
+  &quot;python&quot;: &quot;3.13.7&quot;
+}</pre></section><section id="limits" class="searchable"><h2>limits</h2><pre>{
+  &quot;input_bytes&quot;: 67108864,
+  &quot;parser_wall_seconds&quot;: 30,
+  &quot;parser_memory_bytes&quot;: 1073741824,
+  &quot;parser_processes&quot;: 2,
+  &quot;strings&quot;: 20000,
+  &quot;string_characters&quot;: 4096,
+  &quot;retained_string_bytes&quot;: 8388608,
+  &quot;backend_output_bytes&quot;: 33554432,
+  &quot;json_output_bytes&quot;: 16777216,
+  &quot;html_output_bytes&quot;: 25165824,
+  &quot;diagnostic_bytes&quot;: 1048576,
+  &quot;sampled_worker_disk_bytes&quot;: 268435456,
+  &quot;disk_enforcement&quot;: &quot;sampled; overshoot possible&quot;,
+  &quot;network_enforcement&quot;: &quot;no network feature; OS network isolation is external&quot;,
+  &quot;isolation&quot;: &quot;resource containment, not a malware security boundary&quot;
+}</pre></section><section id="warnings" class="searchable"><h2>warnings</h2><pre>[]</pre></section><section id="static-sha256"><h2>Static: sha256</h2><article class="searchable" id="e-"><pre>&quot;5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119&quot;</pre></article></section><section id="static-size"><h2>Static: size</h2><article class="searchable" id="e-"><pre>2048</pre></article></section><section id="static-format"><h2>Static: format</h2><article class="searchable" id="e-"><pre>&quot;PE&quot;</pre></article></section><section id="static-status"><h2>Static: status</h2><article class="searchable" id="e-"><pre>&quot;complete&quot;</pre></article></section><section id="static-warnings"><h2>Static: warnings</h2></section><section id="static-sections"><h2>Static: sections</h2><article class="searchable" id="e-section:0"><pre>{
+  &quot;name&quot;: &quot;.text&quot;,
+  &quot;offset&quot;: 1024,
+  &quot;file_size&quot;: 512,
+  &quot;va&quot;: &quot;0x140001000&quot;,
+  &quot;memory_size&quot;: 146,
+  &quot;permissions&quot;: &quot;rx&quot;,
+  &quot;valid&quot;: true,
+  &quot;entropy&quot;: 2.28969621055176,
+  &quot;rva&quot;: &quot;0x1000&quot;,
+  &quot;id&quot;: &quot;section:0&quot;
+}</pre></article><article class="searchable" id="e-section:1"><pre>{
+  &quot;name&quot;: &quot;.rdata&quot;,
+  &quot;offset&quot;: 1536,
+  &quot;file_size&quot;: 512,
+  &quot;va&quot;: &quot;0x140002000&quot;,
+  &quot;memory_size&quot;: 410,
+  &quot;permissions&quot;: &quot;r&quot;,
+  &quot;valid&quot;: true,
+  &quot;entropy&quot;: 3.9444005591899827,
+  &quot;rva&quot;: &quot;0x2000&quot;,
+  &quot;id&quot;: &quot;section:1&quot;
+}</pre></article></section><section id="static-segments"><h2>Static: segments</h2></section><section id="static-regions"><h2>Static: regions</h2><article class="searchable" id="e-section:0"><pre>{
+  &quot;name&quot;: &quot;.text&quot;,
+  &quot;offset&quot;: 1024,
+  &quot;file_size&quot;: 512,
+  &quot;va&quot;: &quot;0x140001000&quot;,
+  &quot;memory_size&quot;: 146,
+  &quot;permissions&quot;: &quot;rx&quot;,
+  &quot;valid&quot;: true,
+  &quot;entropy&quot;: 2.28969621055176,
+  &quot;rva&quot;: &quot;0x1000&quot;,
+  &quot;id&quot;: &quot;section:0&quot;
+}</pre></article><article class="searchable" id="e-section:1"><pre>{
+  &quot;name&quot;: &quot;.rdata&quot;,
+  &quot;offset&quot;: 1536,
+  &quot;file_size&quot;: 512,
+  &quot;va&quot;: &quot;0x140002000&quot;,
+  &quot;memory_size&quot;: 410,
+  &quot;permissions&quot;: &quot;r&quot;,
+  &quot;valid&quot;: true,
+  &quot;entropy&quot;: 3.9444005591899827,
+  &quot;rva&quot;: &quot;0x2000&quot;,
+  &quot;id&quot;: &quot;section:1&quot;
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;headers&quot;,
+  &quot;offset&quot;: 0,
+  &quot;file_size&quot;: 1024,
+  &quot;va&quot;: &quot;0x140000000&quot;,
+  &quot;memory_size&quot;: 1024,
+  &quot;permissions&quot;: &quot;r&quot;,
+  &quot;valid&quot;: true,
+  &quot;entropy&quot;: 1.1775452914320912
+}</pre></article></section><section id="static-imports"><h2>Static: imports</h2></section><section id="static-exports"><h2>Static: exports</h2><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;branch_fixture&quot;,
+  &quot;rva&quot;: &quot;0x1000&quot;,
+  &quot;va&quot;: &quot;0x140001000&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;entry_fixture&quot;,
+  &quot;rva&quot;: &quot;0x1060&quot;,
+  &quot;va&quot;: &quot;0x140001060&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;fixture_html&quot;,
+  &quot;rva&quot;: &quot;0x2050&quot;,
+  &quot;va&quot;: &quot;0x140002050&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;fixture_marker&quot;,
+  &quot;rva&quot;: &quot;0x2000&quot;,
+  &quot;va&quot;: &quot;0x140002000&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;fixture_url&quot;,
+  &quot;rva&quot;: &quot;0x2020&quot;,
+  &quot;va&quot;: &quot;0x140002020&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;fixture_wide&quot;,
+  &quot;rva&quot;: &quot;0x2080&quot;,
+  &quot;va&quot;: &quot;0x140002080&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;string_fixture&quot;,
+  &quot;rva&quot;: &quot;0x1030&quot;,
+  &quot;va&quot;: &quot;0x140001030&quot;,
+  &quot;forwarder&quot;: null
+}</pre></article></section><section id="static-symbols"><h2>Static: symbols</h2></section><section id="static-dependencies"><h2>Static: dependencies</h2></section><section id="static-resources"><h2>Static: resources</h2></section><section id="static-certificates"><h2>Static: certificates</h2></section><section id="static-overlay"><h2>Static: overlay</h2><article class="searchable" id="e-"><pre>null</pre></article></section><section id="static-file_entropy"><h2>Static: file_entropy</h2><article class="searchable" id="e-"><pre>3.0032575138075677</pre></article></section><section id="static-headers"><h2>Static: headers</h2><article class="searchable" id="e-"><pre>{
+  &quot;Machine&quot;: 34404,
+  &quot;NumberOfSections&quot;: 2,
+  &quot;TimeDateStamp&quot;: 1791177240,
+  &quot;Characteristics&quot;: 34
+}</pre></article></section><section id="static-strings"><h2>Static: strings</h2><article class="searchable" id="e-string:ascii:4d"><pre>{
+  &quot;id&quot;: &quot;string:ascii:4d&quot;,
+  &quot;text&quot;: &quot;!This program cannot be run in DOS mode.$&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 77,
+  &quot;length&quot;: 41,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:180"><pre>{
+  &quot;id&quot;: &quot;string:ascii:180&quot;,
+  &quot;text&quot;: &quot;.text&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 384,
+  &quot;length&quot;: 5,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:1a4"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:1a4&quot;,
+  &quot;text&quot;: &quot; \u6000\u722e\u6164\u6174&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 420,
+  &quot;length&quot;: 10,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:1a7"><pre>{
+  &quot;id&quot;: &quot;string:ascii:1a7&quot;,
+  &quot;text&quot;: &quot;`.rdata&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 423,
+  &quot;length&quot;: 7,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:449"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:449&quot;,
+  &quot;text&quot;: &quot;\ufa83\u4800\u450f\u48c1\uc483\u5d08\u66c3\u0f2e\u841f&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1097,
+  &quot;length&quot;: 18,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:600"><pre>{
+  &quot;id&quot;: &quot;string:ascii:600&quot;,
+  &quot;text&quot;: &quot;BINARY_WORKBENCH_BENIGN_FIXTURE&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1536,
+  &quot;length&quot;: 31,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:620"><pre>{
+  &quot;id&quot;: &quot;string:ascii:620&quot;,
+  &quot;text&quot;: &quot;https://example.invalid/learning&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1568,
+  &quot;length&quot;: 32,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:64f"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:64f&quot;,
+  &quot;text&quot;: &quot;\u3c00\u6373\u6972\u7470\u613e\u656c\u7472\u2728\u6966\u7478\u7275\u2765\u3c29\u732f\u7263\u7069\u3e74\u5b1b\u3133m&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1615,
+  &quot;length&quot;: 40,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:650"><pre>{
+  &quot;id&quot;: &quot;string:ascii:650&quot;,
+  &quot;text&quot;: &quot;&lt;script&gt;alert(&#x27;fixture&#x27;)&lt;/script&gt;&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1616,
+  &quot;length&quot;: 33,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:650"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:650&quot;,
+  &quot;text&quot;: &quot;\u733c\u7263\u7069\u3e74\u6c61\u7265\u2874\u6627\u7869\u7574\u6572\u2927\u2f3c\u6373\u6972\u7470\u1b3e\u335b\u6d31&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1616,
+  &quot;length&quot;: 38,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:672"><pre>{
+  &quot;id&quot;: &quot;string:ascii:672&quot;,
+  &quot;text&quot;: &quot;[31m&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1650,
+  &quot;length&quot;: 4,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:67f"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:67f&quot;,
+  &quot;text&quot;: &quot;\u5700\u4900\u4400\u4500\u5f00\u4600\u4900\u5800\u5400\u5500\u5200\u4500&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1663,
+  &quot;length&quot;: 24,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:680"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:680&quot;,
+  &quot;text&quot;: &quot;WIDE_FIXTURE&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1664,
+  &quot;length&quot;: 24,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:6e8"><pre>{
+  &quot;id&quot;: &quot;string:ascii:6e8&quot;,
+  &quot;text&quot;: &quot;pe-x64.exe&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1768,
+  &quot;length&quot;: 10,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:6e8"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:6e8&quot;,
+  &quot;text&quot;: &quot;\u6570\u782d\u3436\u652e\u6578&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1768,
+  &quot;length&quot;: 10,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:70e"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:70e&quot;,
+  &quot;text&quot;: &quot;\u3900!\u4800!\u5600!\u6300!\u7200!\u7e00!\u8b00!&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1806,
+  &quot;length&quot;: 28,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:739"><pre>{
+  &quot;id&quot;: &quot;string:ascii:739&quot;,
+  &quot;text&quot;: &quot;branch_fixture&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1849,
+  &quot;length&quot;: 14,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:utf-16le:739"><pre>{
+  &quot;id&quot;: &quot;string:utf-16le:739&quot;,
+  &quot;text&quot;: &quot;\u7262\u6e61\u6863\u665f\u7869\u7574\u6572\u6500\u746e\u7972\u665f\u7869\u7574\u6572\u6600\u7869\u7574\u6572\u685f\u6d74l\u6966\u7478\u7275\u5f65\u616d\u6b72\u7265\u6600\u7869\u7574\u6572\u755f\u6c72\u6600\u7869\u7574\u6572\u775f\u6469e\u7473\u6972\u676e\u665f\u7869\u7574\u6572&quot;,
+  &quot;encoding&quot;: &quot;utf-16le&quot;,
+  &quot;file_offset&quot;: 1849,
+  &quot;length&quot;: 96,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:748"><pre>{
+  &quot;id&quot;: &quot;string:ascii:748&quot;,
+  &quot;text&quot;: &quot;entry_fixture&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1864,
+  &quot;length&quot;: 13,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:756"><pre>{
+  &quot;id&quot;: &quot;string:ascii:756&quot;,
+  &quot;text&quot;: &quot;fixture_html&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1878,
+  &quot;length&quot;: 12,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:763"><pre>{
+  &quot;id&quot;: &quot;string:ascii:763&quot;,
+  &quot;text&quot;: &quot;fixture_marker&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1891,
+  &quot;length&quot;: 14,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:772"><pre>{
+  &quot;id&quot;: &quot;string:ascii:772&quot;,
+  &quot;text&quot;: &quot;fixture_url&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1906,
+  &quot;length&quot;: 11,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:77e"><pre>{
+  &quot;id&quot;: &quot;string:ascii:77e&quot;,
+  &quot;text&quot;: &quot;fixture_wide&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1918,
+  &quot;length&quot;: 12,
+  &quot;truncated&quot;: false
+}</pre></article><article class="searchable" id="e-string:ascii:78b"><pre>{
+  &quot;id&quot;: &quot;string:ascii:78b&quot;,
+  &quot;text&quot;: &quot;string_fixture&quot;,
+  &quot;encoding&quot;: &quot;ascii&quot;,
+  &quot;file_offset&quot;: 1931,
+  &quot;length&quot;: 14,
+  &quot;truncated&quot;: false
+}</pre></article></section><section id="static-strings_truncated"><h2>Static: strings_truncated</h2><article class="searchable" id="e-"><pre>false</pre></article></section><section id="static-indicators"><h2>Static: indicators</h2><article class="searchable" id="e-indicator:string:ascii:620:0"><pre>{
+  &quot;id&quot;: &quot;indicator:string:ascii:620:0&quot;,
+  &quot;kind&quot;: &quot;url&quot;,
+  &quot;value&quot;: &quot;https://example.invalid/learning&quot;,
+  &quot;source_id&quot;: &quot;string:ascii:620&quot;,
+  &quot;file_offset&quot;: 1568,
+  &quot;length&quot;: 32
+}</pre></article><article class="searchable" id="e-indicator:string:ascii:6e8:0"><pre>{
+  &quot;id&quot;: &quot;indicator:string:ascii:6e8:0&quot;,
+  &quot;kind&quot;: &quot;domain&quot;,
+  &quot;value&quot;: &quot;pe-x64.exe&quot;,
+  &quot;source_id&quot;: &quot;string:ascii:6e8&quot;,
+  &quot;file_offset&quot;: 1768,
+  &quot;length&quot;: 10
+}</pre></article></section><section id="static-indicators_truncated"><h2>Static: indicators_truncated</h2><article class="searchable" id="e-"><pre>false</pre></article></section><section id="static-parser"><h2>Static: parser</h2><article class="searchable" id="e-"><pre>{
+  &quot;name&quot;: &quot;pefile&quot;,
+  &quot;version&quot;: &quot;2024.8.26&quot;
+}</pre></article></section><section id="static-architecture"><h2>Static: architecture</h2><article class="searchable" id="e-"><pre>&quot;x64&quot;</pre></article></section><section id="static-bitness"><h2>Static: bitness</h2><article class="searchable" id="e-"><pre>64</pre></article></section><section id="static-endianness"><h2>Static: endianness</h2><article class="searchable" id="e-"><pre>&quot;little&quot;</pre></article></section><section id="static-image_base"><h2>Static: image_base</h2><article class="searchable" id="e-"><pre>&quot;0x140000000&quot;</pre></article></section><section id="static-entry_rva"><h2>Static: entry_rva</h2><article class="searchable" id="e-"><pre>&quot;0x1060&quot;</pre></article></section><section id="static-entry_va"><h2>Static: entry_va</h2><article class="searchable" id="e-"><pre>&quot;0x140001060&quot;</pre></article></section><section id="static-managed"><h2>Static: managed</h2><article class="searchable" id="e-"><pre>false</pre></article></section><section id="static-symbol_table"><h2>Static: symbol_table</h2><article class="searchable" id="e-"><pre>{
+  &quot;file_offset&quot;: 0,
+  &quot;count&quot;: 0,
+  &quot;status&quot;: &quot;absent&quot;
+}</pre></article></section><section id="functions"><h2>Function index</h2><article class="searchable"><a href="#function-0">branch_fixture</a><pre>{
+  &quot;name&quot;: &quot;branch_fixture&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001000&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000102a&quot;
+  },
+  &quot;name_source&quot;: &quot;IMPORTED&quot;,
+  &quot;boundary_source&quot;: &quot;ghidra_analysis&quot;,
+  &quot;file_offset&quot;: 1024
+}</pre></article><article class="searchable"><a href="#function-1">string_fixture</a><pre>{
+  &quot;name&quot;: &quot;string_fixture&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001030&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001055&quot;
+  },
+  &quot;name_source&quot;: &quot;IMPORTED&quot;,
+  &quot;boundary_source&quot;: &quot;ghidra_analysis&quot;,
+  &quot;file_offset&quot;: 1072
+}</pre></article><article class="searchable"><a href="#function-2">entry_fixture</a><pre>{
+  &quot;name&quot;: &quot;entry_fixture&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001060&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001091&quot;
+  },
+  &quot;name_source&quot;: &quot;IMPORTED&quot;,
+  &quot;boundary_source&quot;: &quot;ghidra_analysis&quot;,
+  &quot;file_offset&quot;: 1120
+}</pre></article></section><section id="re-state" class="searchable"><h2>Reverse engineering state</h2><pre>{
+  &quot;backend&quot;: &quot;ghidra&quot;,
+  &quot;version&quot;: &quot;12.1.4&quot;,
+  &quot;language&quot;: &quot;x86:LE:64:default&quot;,
+  &quot;analyzers&quot;: {
+    &quot;ASCII Strings&quot;: true,
+    &quot;ASCII Strings.Create Strings Containing Existing Strings&quot;: false,
+    &quot;ASCII Strings.Create Strings Containing References&quot;: false,
+    &quot;ASCII Strings.Force Model Reload&quot;: false,
+    &quot;ASCII Strings.Require Null Termination for String&quot;: false,
+    &quot;ASCII Strings.Search Only in Accessible Memory Blocks&quot;: false,
+    &quot;Aggressive Instruction Finder&quot;: false,
+    &quot;Aggressive Instruction Finder.Create Analysis Bookmarks&quot;: false,
+    &quot;Apply Data Archives&quot;: false,
+    &quot;Apply Data Archives.Create Analysis Bookmarks&quot;: false,
+    &quot;Call Convention ID&quot;: false,
+    &quot;Call-Fixup Installer&quot;: false,
+    &quot;Condense Filler Bytes&quot;: false,
+    &quot;Create Address Tables&quot;: true,
+    &quot;Create Address Tables.Allow Offcut References&quot;: false,
+    &quot;Create Address Tables.Auto Label Table&quot;: false,
+    &quot;Create Address Tables.Create Analysis Bookmarks&quot;: false,
+    &quot;Create Address Tables.Relocation Table Guide&quot;: false,
+    &quot;Data Reference&quot;: true,
+    &quot;Data Reference.Align End of Strings&quot;: false,
+    &quot;Data Reference.Ascii String References&quot;: true,
+    &quot;Data Reference.Create Address Tables&quot;: false,
+    &quot;Data Reference.References to Pointers&quot;: true,
+    &quot;Data Reference.Relocation Table Guide&quot;: false,
+    &quot;Data Reference.Respect Execute Flag&quot;: true,
+    &quot;Data Reference.Subroutine References&quot;: false,
+    &quot;Data Reference.Switch Table References&quot;: false,
+    &quot;Data Reference.Unicode String References&quot;: true,
+    &quot;Decompiler Parameter ID&quot;: false,
+    &quot;Decompiler Parameter ID.Commit Data Types&quot;: false,
+    &quot;Decompiler Parameter ID.Commit Void Return Values&quot;: false,
+    &quot;Decompiler Switch Analysis&quot;: false,
+    &quot;Demangler Microsoft&quot;: false,
+    &quot;Disassemble Entry Points&quot;: true,
+    &quot;Disassemble Entry Points.Respect Execute Flag&quot;: true,
+    &quot;Embedded Media&quot;: false,
+    &quot;Embedded Media.Create Analysis Bookmarks&quot;: false,
+    &quot;External Entry References&quot;: false,
+    &quot;Function ID&quot;: true,
+    &quot;Function ID.Always Apply FID Labels&quot;: false,
+    &quot;Function ID.Create Analysis Bookmarks&quot;: false,
+    &quot;Non-Returning Functions - Discovered&quot;: false,
+    &quot;Non-Returning Functions - Discovered.Create Analysis Bookmarks&quot;: false,
+    &quot;Non-Returning Functions - Discovered.Repair Flow Damage&quot;: false,
+    &quot;Non-Returning Functions - Known&quot;: false,
+    &quot;Non-Returning Functions - Known.Create Analysis Bookmarks&quot;: false,
+    &quot;PDB MSDIA&quot;: false,
+    &quot;PDB MSDIA.Search untrusted symbol servers&quot;: false,
+    &quot;PDB Universal&quot;: false,
+    &quot;PDB Universal.Import Source Line Info&quot;: false,
+    &quot;PDB Universal.Search untrusted symbol servers&quot;: false,
+    &quot;Reference&quot;: true,
+    &quot;Reference.Align End of Strings&quot;: false,
+    &quot;Reference.Ascii String References&quot;: true,
+    &quot;Reference.Create Address Tables&quot;: false,
+    &quot;Reference.References to Pointers&quot;: true,
+    &quot;Reference.Relocation Table Guide&quot;: false,
+    &quot;Reference.Respect Execute Flag&quot;: true,
+    &quot;Reference.Subroutine References&quot;: false,
+    &quot;Reference.Switch Table References&quot;: false,
+    &quot;Reference.Unicode String References&quot;: true,
+    &quot;Scalar Operand References&quot;: true,
+    &quot;Scalar Operand References.Relocation Table Guide&quot;: false,
+    &quot;Shared Return Calls&quot;: true,
+    &quot;Shared Return Calls.Allow Conditional Jumps&quot;: false,
+    &quot;Shared Return Calls.Assume Contiguous Functions Only&quot;: false,
+    &quot;Stack&quot;: true,
+    &quot;Stack.Create Local Variables&quot;: false,
+    &quot;Stack.Create Param Variables&quot;: false,
+    &quot;Subroutine References&quot;: true,
+    &quot;Subroutine References.Create Thunks Early&quot;: false,
+    &quot;Variadic Function Signature Override&quot;: false,
+    &quot;Variadic Function Signature Override.Create Analysis Bookmarks&quot;: false,
+    &quot;Windows x86 PE Exception Handling&quot;: false,
+    &quot;Windows x86 PE RTTI Analyzer&quot;: false,
+    &quot;Windows x86 Thread Environment Block (TEB) Analyzer&quot;: false,
+    &quot;WindowsPE x86 Propagate External Parameters&quot;: false,
+    &quot;WindowsResourceReference&quot;: false,
+    &quot;WindowsResourceReference.Create Analysis Bookmarks&quot;: false,
+    &quot;x86 Constant Reference Analyzer&quot;: true,
+    &quot;x86 Constant Reference Analyzer.Create Data from pointer&quot;: true,
+    &quot;x86 Constant Reference Analyzer.Function parameter/return Pointer analysis&quot;: true,
+    &quot;x86 Constant Reference Analyzer.Require pointer param data type&quot;: false,
+    &quot;x86 Constant Reference Analyzer.Stored Value Pointer analysis&quot;: true,
+    &quot;x86 Constant Reference Analyzer.Trust values read from writable memory&quot;: false
+  },
+  &quot;sha256&quot;: &quot;5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119&quot;,
+  &quot;warnings&quot;: [],
+  &quot;status&quot;: &quot;complete&quot;,
+  &quot;selection&quot;: &quot;branch_fixture,string_fixture,entry_fixture&quot;,
+  &quot;provenance&quot;: {
+    &quot;launcher&quot;: &quot;82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55&quot;,
+    &quot;utility&quot;: &quot;bb42a14285530c7d41373e1d130677bd2b90b34f32aedba5042f23663d652c7e&quot;,
+    &quot;policy&quot;: &quot;ec409bc5188d6d38e457a11cb4f0e80803231a334bb2cb29a182f857c17c08fc&quot;,
+    &quot;exporter&quot;: &quot;02e1b908c909991910396b023efbc62b35abc7d6b6ce51862d26e2041ba5137f&quot;
+  },
+  &quot;limits&quot;: {
+    &quot;wall_seconds&quot;: 180,
+    &quot;analysis_seconds&quot;: 90,
+    &quot;decompile_seconds_per_function&quot;: 15,
+    &quot;memory_bytes&quot;: 4294967296,
+    &quot;processes&quot;: 4,
+    &quot;cpu_threads&quot;: 2,
+    &quot;output_bytes&quot;: 33554432
+  }
+}</pre></section><section id="function-0"><h2>branch_fixture</h2><p class="note">Pseudocode approximates machine code. Check instructions and references.</p><article class="searchable"><pre>
+int branch_fixture(int param_1)
+
+{
+  undefined4 uStack_c;
+  
+                    /* 0x1000  1  branch_fixture */
+  if (param_1 &lt; 0xb) {
+    uStack_c = param_1 + -3;
+  }
+  else {
+    uStack_c = param_1 + 7;
+  }
+  return uStack_c;
+}
+
+</pre></article><h3>instructions</h3><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;55&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001000&quot;
+  },
+  &quot;text&quot;: &quot;PUSH RBP&quot;,
+  &quot;file_offset&quot;: 1024
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;50&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001001&quot;
+  },
+  &quot;text&quot;: &quot;PUSH RAX&quot;,
+  &quot;file_offset&quot;: 1025
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4889e5&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001002&quot;
+  },
+  &quot;text&quot;: &quot;MOV RBP,RSP&quot;,
+  &quot;file_offset&quot;: 1026
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;894d00&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001005&quot;
+  },
+  &quot;text&quot;: &quot;MOV dword ptr [RBP],ECX&quot;,
+  &quot;file_offset&quot;: 1029
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;837d000a&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001008&quot;
+  },
+  &quot;text&quot;: &quot;CMP dword ptr [RBP],0xa&quot;,
+  &quot;file_offset&quot;: 1032
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;7e0b&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100c&quot;
+  },
+  &quot;text&quot;: &quot;JLE 0x140001019&quot;,
+  &quot;file_offset&quot;: 1036
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8b4500&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100e&quot;
+  },
+  &quot;text&quot;: &quot;MOV EAX,dword ptr [RBP]&quot;,
+  &quot;file_offset&quot;: 1038
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;83c007&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001011&quot;
+  },
+  &quot;text&quot;: &quot;ADD EAX,0x7&quot;,
+  &quot;file_offset&quot;: 1041
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;894504&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001014&quot;
+  },
+  &quot;text&quot;: &quot;MOV dword ptr [RBP + 0x4],EAX&quot;,
+  &quot;file_offset&quot;: 1044
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;eb09&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001017&quot;
+  },
+  &quot;text&quot;: &quot;JMP 0x140001022&quot;,
+  &quot;file_offset&quot;: 1047
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8b4500&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001019&quot;
+  },
+  &quot;text&quot;: &quot;MOV EAX,dword ptr [RBP]&quot;,
+  &quot;file_offset&quot;: 1049
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;83e803&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000101c&quot;
+  },
+  &quot;text&quot;: &quot;SUB EAX,0x3&quot;,
+  &quot;file_offset&quot;: 1052
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;894504&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000101f&quot;
+  },
+  &quot;text&quot;: &quot;MOV dword ptr [RBP + 0x4],EAX&quot;,
+  &quot;file_offset&quot;: 1055
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8b4504&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001022&quot;
+  },
+  &quot;text&quot;: &quot;MOV EAX,dword ptr [RBP + 0x4]&quot;,
+  &quot;file_offset&quot;: 1058
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4883c408&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001025&quot;
+  },
+  &quot;text&quot;: &quot;ADD RSP,0x8&quot;,
+  &quot;file_offset&quot;: 1061
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;5d&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001029&quot;
+  },
+  &quot;text&quot;: &quot;POP RBP&quot;,
+  &quot;file_offset&quot;: 1065
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;c3&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000102a&quot;
+  },
+  &quot;text&quot;: &quot;RET&quot;,
+  &quot;file_offset&quot;: 1066
+}</pre></article><h3>references</h3><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001005&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff0&quot;
+  },
+  &quot;file_offset&quot;: 1029,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001008&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff0&quot;
+  },
+  &quot;file_offset&quot;: 1032,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100c&quot;
+  },
+  &quot;symbol&quot;: &quot;LAB_140001019&quot;,
+  &quot;type&quot;: &quot;CONDITIONAL_JUMP&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001019&quot;
+  },
+  &quot;file_offset&quot;: 1036,
+  &quot;target_file_offset&quot;: 1049,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100e&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff0&quot;
+  },
+  &quot;file_offset&quot;: 1038,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001014&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;WRITE&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1044,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001017&quot;
+  },
+  &quot;symbol&quot;: &quot;LAB_140001022&quot;,
+  &quot;type&quot;: &quot;UNCONDITIONAL_JUMP&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001022&quot;
+  },
+  &quot;file_offset&quot;: 1047,
+  &quot;target_file_offset&quot;: 1058,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001019&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff0&quot;
+  },
+  &quot;file_offset&quot;: 1049,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000101f&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;WRITE&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1055,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001022&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;READ&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1058,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><h3>callers</h3><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x1400000a4&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000018c&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x1400020f3&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;EXTERNAL&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;Entry Point&quot;,
+    &quot;value&quot;: &quot;0x0&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000106f&quot;
+  }
+}</pre></article><h3>blocks</h3><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001000&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100d&quot;
+  },
+  &quot;edges&quot;: [
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x140001019&quot;
+      },
+      &quot;type&quot;: &quot;CONDITIONAL_JUMP&quot;
+    },
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x14000100e&quot;
+      },
+      &quot;type&quot;: &quot;FALL_THROUGH&quot;
+    }
+  ]
+}</pre></article><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000100e&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001018&quot;
+  },
+  &quot;edges&quot;: [
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x140001022&quot;
+      },
+      &quot;type&quot;: &quot;UNCONDITIONAL_JUMP&quot;
+    }
+  ]
+}</pre></article><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001019&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001021&quot;
+  },
+  &quot;edges&quot;: [
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x140001022&quot;
+      },
+      &quot;type&quot;: &quot;FALL_THROUGH&quot;
+    }
+  ]
+}</pre></article><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001022&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000102a&quot;
+  },
+  &quot;edges&quot;: []
+}</pre></article></section><section id="function-1"><h2>string_fixture</h2><p class="note">Pseudocode approximates machine code. Check instructions and references.</p><article class="searchable"><pre>
+char * string_fixture(int param_1)
+
+{
+  char *pcVar1;
+  
+                    /* 0x1030  7  string_fixture */
+  pcVar1 = &quot;https://example.invalid/learning&quot;;
+  if (param_1 != 0) {
+    pcVar1 = &quot;BINARY_WORKBENCH_BENIGN_FIXTURE&quot;;
+  }
+  return pcVar1;
+}
+
+</pre></article><h3>instructions</h3><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;55&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001030&quot;
+  },
+  &quot;text&quot;: &quot;PUSH RBP&quot;,
+  &quot;file_offset&quot;: 1072
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;50&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001031&quot;
+  },
+  &quot;text&quot;: &quot;PUSH RAX&quot;,
+  &quot;file_offset&quot;: 1073
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4889e5&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001032&quot;
+  },
+  &quot;text&quot;: &quot;MOV RBP,RSP&quot;,
+  &quot;file_offset&quot;: 1074
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;894d04&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001035&quot;
+  },
+  &quot;text&quot;: &quot;MOV dword ptr [RBP + 0x4],ECX&quot;,
+  &quot;file_offset&quot;: 1077
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8b5504&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001038&quot;
+  },
+  &quot;text&quot;: &quot;MOV EDX,dword ptr [RBP + 0x4]&quot;,
+  &quot;file_offset&quot;: 1080
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;488d05de0f0000&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000103b&quot;
+  },
+  &quot;text&quot;: &quot;LEA RAX,[0x140002020]&quot;,
+  &quot;file_offset&quot;: 1083
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;488d0db70f0000&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001042&quot;
+  },
+  &quot;text&quot;: &quot;LEA RCX,[0x140002000]&quot;,
+  &quot;file_offset&quot;: 1090
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;83fa00&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001049&quot;
+  },
+  &quot;text&quot;: &quot;CMP EDX,0x0&quot;,
+  &quot;file_offset&quot;: 1097
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;480f45c1&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000104c&quot;
+  },
+  &quot;text&quot;: &quot;CMOVNZ RAX,RCX&quot;,
+  &quot;file_offset&quot;: 1100
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4883c408&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001050&quot;
+  },
+  &quot;text&quot;: &quot;ADD RSP,0x8&quot;,
+  &quot;file_offset&quot;: 1104
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;5d&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001054&quot;
+  },
+  &quot;text&quot;: &quot;POP RBP&quot;,
+  &quot;file_offset&quot;: 1108
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;c3&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001055&quot;
+  },
+  &quot;text&quot;: &quot;RET&quot;,
+  &quot;file_offset&quot;: 1109
+}</pre></article><h3>references</h3><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001035&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;WRITE&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1077,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001038&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;READ&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1080,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000103b&quot;
+  },
+  &quot;symbol&quot;: &quot;fixture_url&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140002020&quot;
+  },
+  &quot;file_offset&quot;: 1083,
+  &quot;target_file_offset&quot;: 1568,
+  &quot;evidence_ids&quot;: [
+    &quot;string:ascii:620&quot;
+  ]
+}</pre><a href="#e-string:ascii:620">string:ascii:620</a></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001042&quot;
+  },
+  &quot;symbol&quot;: &quot;fixture_marker&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140002000&quot;
+  },
+  &quot;file_offset&quot;: 1090,
+  &quot;target_file_offset&quot;: 1536,
+  &quot;evidence_ids&quot;: [
+    &quot;string:ascii:600&quot;
+  ]
+}</pre><a href="#e-string:ascii:600">string:ascii:600</a></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000104c&quot;
+  },
+  &quot;symbol&quot;: &quot;fixture_marker&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140002000&quot;
+  },
+  &quot;file_offset&quot;: 1100,
+  &quot;target_file_offset&quot;: 1536,
+  &quot;evidence_ids&quot;: [
+    &quot;string:ascii:600&quot;
+  ]
+}</pre><a href="#e-string:ascii:600">string:ascii:600</a></article><h3>callers</h3><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000210b&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;EXTERNAL&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;Entry Point&quot;,
+    &quot;value&quot;: &quot;0x0&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000107c&quot;
+  }
+}</pre></article><h3>blocks</h3><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001030&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001055&quot;
+  },
+  &quot;edges&quot;: []
+}</pre></article></section><section id="function-2"><h2>entry_fixture</h2><p class="note">Pseudocode approximates machine code. Check instructions and references.</p><article class="searchable"><pre>
+int entry_fixture(void)
+
+{
+  int iVar1;
+  char *pcVar2;
+  
+                    /* 0x1060  2  entry_fixture */
+  iVar1 = branch_fixture(0xc);
+  pcVar2 = (char *)string_fixture(1);
+  return iVar1 + *pcVar2;
+}
+
+</pre></article><h3>instructions</h3><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;55&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001060&quot;
+  },
+  &quot;text&quot;: &quot;PUSH RBP&quot;,
+  &quot;file_offset&quot;: 1120
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4883ec30&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001061&quot;
+  },
+  &quot;text&quot;: &quot;SUB RSP,0x30&quot;,
+  &quot;file_offset&quot;: 1121
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;488d6c2430&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001065&quot;
+  },
+  &quot;text&quot;: &quot;LEA RBP,[RSP + 0x30]&quot;,
+  &quot;file_offset&quot;: 1125
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;b90c000000&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000106a&quot;
+  },
+  &quot;text&quot;: &quot;MOV ECX,0xc&quot;,
+  &quot;file_offset&quot;: 1130
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;e88cffffff&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000106f&quot;
+  },
+  &quot;text&quot;: &quot;CALL 0x140001000&quot;,
+  &quot;file_offset&quot;: 1135
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8945fc&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001074&quot;
+  },
+  &quot;text&quot;: &quot;MOV dword ptr [RBP + -0x4],EAX&quot;,
+  &quot;file_offset&quot;: 1140
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;b901000000&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001077&quot;
+  },
+  &quot;text&quot;: &quot;MOV ECX,0x1&quot;,
+  &quot;file_offset&quot;: 1143
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;e8afffffff&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000107c&quot;
+  },
+  &quot;text&quot;: &quot;CALL 0x140001030&quot;,
+  &quot;file_offset&quot;: 1148
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4889c1&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001081&quot;
+  },
+  &quot;text&quot;: &quot;MOV RCX,RAX&quot;,
+  &quot;file_offset&quot;: 1153
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;8b45fc&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001084&quot;
+  },
+  &quot;text&quot;: &quot;MOV EAX,dword ptr [RBP + -0x4]&quot;,
+  &quot;file_offset&quot;: 1156
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;0fbe09&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001087&quot;
+  },
+  &quot;text&quot;: &quot;MOVSX ECX,byte ptr [RCX]&quot;,
+  &quot;file_offset&quot;: 1159
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;01c8&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000108a&quot;
+  },
+  &quot;text&quot;: &quot;ADD EAX,ECX&quot;,
+  &quot;file_offset&quot;: 1162
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;4883c430&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000108c&quot;
+  },
+  &quot;text&quot;: &quot;ADD RSP,0x30&quot;,
+  &quot;file_offset&quot;: 1164
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;5d&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001090&quot;
+  },
+  &quot;text&quot;: &quot;POP RBP&quot;,
+  &quot;file_offset&quot;: 1168
+}</pre></article><article class="searchable"><pre>{
+  &quot;bytes&quot;: &quot;c3&quot;,
+  &quot;address&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001091&quot;
+  },
+  &quot;text&quot;: &quot;RET&quot;,
+  &quot;file_offset&quot;: 1169
+}</pre></article><h3>references</h3><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001065&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff8&quot;
+  },
+  &quot;file_offset&quot;: 1125,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000106f&quot;
+  },
+  &quot;symbol&quot;: &quot;branch_fixture&quot;,
+  &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001000&quot;
+  },
+  &quot;file_offset&quot;: 1135,
+  &quot;target_file_offset&quot;: 1024,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001074&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;WRITE&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1140,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x14000107c&quot;
+  },
+  &quot;symbol&quot;: &quot;string_fixture&quot;,
+  &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001030&quot;
+  },
+  &quot;file_offset&quot;: 1148,
+  &quot;target_file_offset&quot;: 1072,
+  &quot;evidence_ids&quot;: []
+}</pre></article><article class="searchable"><pre>{
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001084&quot;
+  },
+  &quot;symbol&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;READ&quot;,
+  &quot;to&quot;: {
+    &quot;space&quot;: &quot;stack&quot;,
+    &quot;value&quot;: &quot;0xfffffffffffffff4&quot;
+  },
+  &quot;file_offset&quot;: 1156,
+  &quot;target_file_offset&quot;: null,
+  &quot;evidence_ids&quot;: []
+}</pre></article><h3>callers</h3><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x1400000a0&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;DATA&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x1400020f7&quot;
+  }
+}</pre></article><article class="searchable"><pre>{
+  &quot;type&quot;: &quot;EXTERNAL&quot;,
+  &quot;from&quot;: {
+    &quot;space&quot;: &quot;Entry Point&quot;,
+    &quot;value&quot;: &quot;0x0&quot;
+  }
+}</pre></article><h3>blocks</h3><article class="searchable"><pre>{
+  &quot;start&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001060&quot;
+  },
+  &quot;end&quot;: {
+    &quot;space&quot;: &quot;ram&quot;,
+    &quot;value&quot;: &quot;0x140001091&quot;
+  },
+  &quot;edges&quot;: [
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x140001000&quot;
+      },
+      &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;
+    },
+    {
+      &quot;to&quot;: {
+        &quot;space&quot;: &quot;ram&quot;,
+        &quot;value&quot;: &quot;0x140001030&quot;
+      },
+      &quot;type&quot;: &quot;UNCONDITIONAL_CALL&quot;
+    }
+  ]
+}</pre></article></section><section id="signatures"><h2>signatures</h2><article class="searchable"><pre>{
+  &quot;status&quot;: &quot;complete&quot;,
+  &quot;engine&quot;: &quot;yara-x&quot;,
+  &quot;version&quot;: &quot;1.21.0&quot;,
+  &quot;matches&quot;: [
+    {
+      &quot;rule&quot;: &quot;BinaryWorkbenchBenignMarker&quot;,
+      &quot;pattern&quot;: &quot;$marker&quot;,
+      &quot;file_offset&quot;: 1536,
+      &quot;length&quot;: 31
+    }
+  ],
+  &quot;truncated&quot;: false,
+  &quot;pattern_match_cap&quot;: 100,
+  &quot;pattern_cap_reached&quot;: false,
+  &quot;sha256&quot;: &quot;5557c9fc59d06f0fd493c340a346d2a21761f061e7b15ff7e35574aa52e50119&quot;,
+  &quot;rules_sha256&quot;: &quot;50eb97b2e584868e27369930aafb2fabd1bdf802ca4f821d1f7c6ee85436b49a&quot;,
+  &quot;includes&quot;: &quot;disabled&quot;
+}</pre></article></section><section id="findings"><h2>findings</h2><article class="searchable"><pre>{
+  &quot;id&quot;: &quot;embedded_indicators:1d60c4329ece6693&quot;,
+  &quot;kind&quot;: &quot;embedded_indicators&quot;,
+  &quot;priority&quot;: &quot;low&quot;,
+  &quot;explanation&quot;: &quot;Observed 2 candidate network indicators; the first 100 support this finding.&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;indicator:string:ascii:620:0&quot;,
+    &quot;indicator:string:ascii:6e8:0&quot;
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;file_offset&quot;: 1568,
+      &quot;length&quot;: 32
+    },
+    {
+      &quot;file_offset&quot;: 1768,
+      &quot;length&quot;: 10
+    }
+  ],
+  &quot;uncertainty&quot;: &quot;Strings may be documentation, resources, unused code or deliberately misleading data. No indicator was contacted.&quot;,
+  &quot;classification&quot;: &quot;heuristic_interpretation&quot;
+}</pre></article><article class="searchable"><pre>{
+  &quot;id&quot;: &quot;signature_match:348ba2e3bffce849&quot;,
+  &quot;kind&quot;: &quot;signature_match&quot;,
+  &quot;priority&quot;: &quot;medium&quot;,
+  &quot;explanation&quot;: &quot;Local rule BinaryWorkbenchBenignMarker matched.&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;signature:0&quot;
+  ],
+  &quot;locations&quot;: [
+    {
+      &quot;file_offset&quot;: 1536,
+      &quot;length&quot;: 31
+    }
+  ],
+  &quot;uncertainty&quot;: &quot;A rule match is only as reliable as its source and condition; harmless demonstration rules are not malware detection.&quot;,
+  &quot;classification&quot;: &quot;heuristic_interpretation&quot;
+}</pre></article></section><script>const box=document.getElementById('search');const rows=Array.from(document.querySelectorAll('.searchable'));box.addEventListener('input',()=>{const term=box.value.toLowerCase();for(const row of rows)row.hidden=!row.textContent.toLowerCase().includes(term);document.getElementById('count').textContent=rows.filter(x=>!x.hidden).length+' visible items';});</script></body></html>
