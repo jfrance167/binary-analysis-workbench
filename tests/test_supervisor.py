@@ -50,7 +50,10 @@ def test_memory_and_process_limits(tmp_path):
     assert 'unexpected' not in result.stdout and ('limited' in result.stdout or result.status=='failed')
     process_dir=tmp_path/'process';process_dir.mkdir()
     script="import subprocess,sys\ntry:\n subprocess.run([sys.executable,'-I','-c',\"print('unexpected')\"],check=True)\nexcept (OSError,subprocess.CalledProcessError):\n print('limited')"
-    result=run_worker([sys.executable,'-I','-c',script],process_dir,processes=2)
+    # Use the base interpreter so a venv launcher cannot consume a process slot.
+    # With one slot, the worker runs but its child must be rejected by the job.
+    interpreter = str(Path(sys._base_executable).resolve())
+    result=run_worker([interpreter,'-I','-c',script],process_dir,processes=1)
     assert 'unexpected' not in result.stdout and 'limited' in result.stdout
 
 
