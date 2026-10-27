@@ -14,7 +14,7 @@ license = "MIT"
 binary-workbench = "binary_workbench.cli:main"
 
 [project.optional-dependencies]
-signatures = ["yara-x==1.21.0"]
+signatures = ["yara-x==1.22.0"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
